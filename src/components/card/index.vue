@@ -1,7 +1,6 @@
 <template>
     <div class="info">
-        <img v-if="data.img" :src="data.img" alt="">
-        <img v-else src="@/assets/img/product1.png" alt="">
+        <img :src="data.img" alt="">
         <div class="desc">
             <h4>{{ data.name }}</h4>
             <p>{{ data.desc }}</p>

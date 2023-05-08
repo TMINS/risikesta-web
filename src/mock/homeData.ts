@@ -50,21 +50,21 @@ export const homeData: homeType = {
             subTitle: '免插电、开机即用',
             title: '电池4G高清摄像机',
             desc: '4G全网通｜太阳能供电｜智能红外侦测｜1080P高清',
-            id: 0,
+            id: 1,
         },
         {
             img: banner2,
             subTitle: '免插电、开机即用',
             title: '电池4G高清摄像机',
             desc: '4G全网通｜太阳能供电｜智能红外侦测｜1080P高清',
-            id: 0,
+            id: 1,
         },
         {
             img: banner3,
             subTitle: '免插电、开机即用',
             title: '电池4G高清摄像机',
             desc: '4G全网通｜太阳能供电｜智能红外侦测｜1080P高清',
-            id: 0,
+            id: 1,
         }
     ],
     productData: {
