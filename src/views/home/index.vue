@@ -44,7 +44,7 @@
 
       <div class="app">
         <div class="app-img">
-          <img class="phone" src="@/assets/img/app-phone.png" alt="">
+          <img class="phone" src="@/assets/img/app-phone.jpg" alt="">
           <img class="shadow" src="@/assets/img/app-shadow.png" alt="">
           <img class="monitor" src="@/assets/img/app-monitor.png" alt="">
         </div>

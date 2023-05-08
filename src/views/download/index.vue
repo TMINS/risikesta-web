@@ -3,7 +3,7 @@
 
         <section>
             <div class="banner">
-                <img src="@/assets/img/download-banner.png" alt="">
+                <img src="@/assets/img/download-banner.jpg" alt="">
                 <div class="banner-data">
                     <h2>RSMART App</h2>
                     <p>版本更新时间：2023/02/21</p>

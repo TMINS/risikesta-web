@@ -31,13 +31,13 @@ interface productType {
  * @description 首页数据配置
  */
 
-import product1 from '@/assets/product/product1.png'
-import product2 from '@/assets/product/product2.png'
-import product3 from '@/assets/product/product3.png'
+import product1 from '@/assets/product/product1.jpg'
+import product2 from '@/assets/product/product2.jpg'
+import product3 from '@/assets/product/product3.jpg'
 
-import banner1 from '@/assets/img/banner1.png'
-import banner2 from '@/assets/img/banner2.png'
-import banner3 from '@/assets/img/banner3.png'
+import banner1 from '@/assets/img/banner1.jpg'
+import banner2 from '@/assets/img/banner2.jpg'
+import banner3 from '@/assets/img/banner3.jpg'
 
 
 

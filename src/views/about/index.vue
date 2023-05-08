@@ -3,7 +3,7 @@
 
         <section>
             <div class="banner">
-                <img src="@/assets/img/about-banner2.png" alt="" />
+                <img src="@/assets/img/about-banner2.jpg" alt="" />
                 <div class="info">
                     <h3>创新谋发展 / 智慧引未来</h3>
                     <!-- <p>观看视频</p> -->
@@ -23,7 +23,7 @@
             <div class="video">
                 <h3 class="title">创新、品质与服务</h3>
                 <div class="video-view">
-                    <img v-if="!isVideo" class="cover" src="@/assets/img/video-pic.png" alt="">
+                    <img class="cover" src="@/assets/img/video-pic.jpg" alt="">
                     <img v-if="isVideo" class="stop" src="@/assets/img/stop.png" alt="">
                 </div>
             </div>

@@ -224,7 +224,8 @@ function handleClick(id: number) {
             flex-wrap: wrap;
 
             .info {
-                width: 49%;
+                // width: 49%;
+                width: calc(50% - 10px);
             }
         }
 
