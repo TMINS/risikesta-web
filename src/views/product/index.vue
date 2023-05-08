@@ -197,6 +197,15 @@ function handleRoute() {
         justify-content: space-between;
         background: #fff;
 
+        .logo {
+            cursor: pointer;
+
+            img {
+                width: 222px;
+                height: auto;
+            }
+        }
+
         ul {
             display: flex;
             align-items: center;

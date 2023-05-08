@@ -168,6 +168,8 @@ function handleTo() {
     justify-content: space-between;
 
     .logo {
+      cursor: pointer;
+
       img {
         width: 222px;
         height: auto;
