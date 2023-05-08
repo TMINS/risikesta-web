@@ -47,16 +47,17 @@ defineProps(['data'])
         h4 {
             font-weight: normal;
             font-size: 42px;
+            line-height: 42px;
             font-weight: 550;
         }
 
         p {
-            padding-top: 18px;
+            padding-top: 10px;
             font-size: 20px;
         }
 
         .handle {
-            margin-top: 40px;
+            margin-top: 26px;
             border-radius: 50px;
             border: 1px solid #000;
             height: 70px;

@@ -45,6 +45,7 @@ defineProps(['data'])
 
         h4 {
             font-weight: normal;
+            line-height: 46px;
             font-size: 42px;
             // opacity: 0;
             // transform: translateY(-20px);

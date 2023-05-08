@@ -238,6 +238,7 @@ function handleDownApp(url: string) {
                 display: flex;
                 align-items: center;
                 justify-content: space-between;
+                font-weight: normal;
 
                 span {
                     font-size: 32px;
@@ -245,8 +246,8 @@ function handleDownApp(url: string) {
                 }
 
                 img {
-                    width: 38px;
-                    height: 38px;
+                    width: 28px;
+                    height: 28px;
                 }
 
                 .active {
@@ -281,7 +282,7 @@ function handleDownApp(url: string) {
                 }
 
                 li:last-child {
-                    border: none;
+                    border-bottom: 1px dashed transparent;
                 }
             }
         }

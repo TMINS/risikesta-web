@@ -1,7 +1,7 @@
 <template>
   <header class="base-head" :class="show ? '' : 'hide'">
     <section>
-      <div class="logo">
+      <div class="logo" @click="handleTo">
         <img src="@/assets/img/logo.png" alt="" />
       </div>
 
@@ -10,8 +10,9 @@
           :class="nowPath === item.path || item.childRoute.includes(nowPath) ? 'active' : ''" @click="handleRoute(item)">
           <span>{{ item.name }}</span>
           <div class="child" v-if="item.children.length > 0">
-            <p v-for="(child, index2) in item.children" :key="index2" @click.stop="handleRoute(item, index2)">{{
-              child.name }}</p>
+            <p v-for="(child, index2) in item.children" :key="index2"
+              :class="nowPathPoint === child.point ? 'active' : ''" @click.stop="handleRoute(item, index2)">{{
+                child.name }}</p>
           </div>
         </li>
       </ul>
@@ -25,9 +26,10 @@
 </template>
 
 <script lang="ts" setup>
-import { ref, watch } from "vue"
+import { ref, watch, onMounted, onUnmounted } from "vue"
 import { useRoute, useRouter } from "vue-router"
 import { useWindowScroll } from '@vueuse/core'
+import eventBus from '@/eventBus'
 interface nav {
   name: string,
   path?: string,
@@ -87,7 +89,7 @@ const nav = ref([
 const route = useRoute()
 const router = useRouter()
 const nowPath = ref(route.path)//当前路由
-// const nowPathPoint = ref(route.query.point || 'consumption')
+const nowPathPoint = ref(route.query.point || 'consumption')
 
 
 
@@ -101,6 +103,8 @@ watch(y, () => {
     } else {
       show.value = true
     }
+  } else {
+    show.value = true
   }
 
 })
@@ -109,14 +113,27 @@ watch(route, () => {
   nowPath.value = route.path
 })
 
-
+onMounted(() => {
+  eventBus.on('updateNav', (point: string) => {
+    nowPathPoint.value = point
+  })
+})
+onUnmounted(() => {
+  eventBus.off('updateNav')
+})
 
 function handleRoute(item: nav, index?: number) {
   let query = {}
+  // 设置子路由参数
   if (item.children && item.children.length > 0 && index != null) {
+    // 子路由
     query = {
       point: item.children[index]?.point
     }
+    // 更新point
+    nowPathPoint.value = item.children[index].point as string
+    // 通知子页面更新
+    eventBus.emit('productPageChange', item.children[index].point)
   }
   router.push({
     path: item.path,
@@ -125,6 +142,9 @@ function handleRoute(item: nav, index?: number) {
 
   nowPath.value = item.path as string
 
+}
+function handleTo() {
+  router.push('/home')
 }
 
 </script>
@@ -167,6 +187,7 @@ function handleRoute(item: nav, index?: number) {
         font-size: 16px;
         position: relative;
         cursor: pointer;
+        font-weight: bold;
 
         .child {
           width: 216px;
@@ -186,41 +207,56 @@ function handleRoute(item: nav, index?: number) {
             text-align: center;
             line-height: 80px;
             color: #000;
+            font-weight: bold;
             border-bottom: 1px solid #e5e5e5;
             cursor: pointer;
+            position: relative;
+          }
+
+          p:hover {
+            color: #00A4BB;
           }
 
           .active {
             color: #00A4BB;
           }
+
+          .active::after {
+            display: none;
+          }
         }
       }
+
 
       .active {
         color: #00A4BB;
       }
 
-      .active::after {
-        content: '';
-        position: absolute;
-        bottom: 0;
-        left: 50%;
-        z-index: 3;
-        transform: translateX(-50%);
-        display: block;
-        width: 80px;
-        height: 2px;
-        background: #00A4BB;
-      }
+      // .active::after {
+      //   content: '';
+      //   position: absolute;
+      //   bottom: 0;
+      //   left: 50%;
+      //   z-index: 3;
+      //   transform: translateX(-50%);
+      //   display: block;
+      //   width: 80px;
+      //   height: 2px;
+      //   background: #00A4BB;
+      // }
 
       li:hover {
+        color: #00A4BB;
+
         .child {
           visibility: visible;
           opacity: 1;
         }
       }
 
-      .active::after {
+
+      .active::after,
+      li:hover::after {
         content: "";
         display: block;
         position: absolute;

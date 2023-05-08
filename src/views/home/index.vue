@@ -44,7 +44,7 @@
 
       <div class="app">
         <div class="app-img">
-          <img class="phone" src="@/assets/img/app-phone.jpg" alt="">
+          <img class="phone" src="@/assets/img/app-phone.png" alt="">
           <img class="shadow" src="@/assets/img/app-shadow.png" alt="">
           <img class="monitor" src="@/assets/img/app-monitor.png" alt="">
         </div>
@@ -55,7 +55,7 @@
           <div class="handle">
             <p @click="handleLoadDown(homeData.iosUrl)"><span>IOS下载</span></p>
             <p @click="handleLoadDown(homeData.androidUrl)"><span>Android下载</span></p>
-            <img src="@/assets/img/more.png" alt="">
+            <img src="@/assets/img/more.png" alt="" @click="handleRoute">
           </div>
         </div>
       </div>
@@ -104,6 +104,9 @@ function handleClick(id: number) {
 }
 function handleLoadDown(url: string) {
   window.open(url)
+}
+function handleRoute() {
+  router.push('/download')
 }
 </script>
 
@@ -264,8 +267,8 @@ function handleLoadDown(url: string) {
       }
 
       .phone:hover {
-        z-index: 3;
-        transform: scale(1.03);
+        // z-index: 3;
+        // transform: translateX(20px);
       }
 
       .shadow {
@@ -284,8 +287,18 @@ function handleLoadDown(url: string) {
       }
 
       .monitor:hover {
-        z-index: 4;
-        transform: scale(1.03);
+        // z-index: 4;
+        // transform: translateX(-20px);
+      }
+    }
+
+    .app-img:hover {
+      .phone {
+        transform: translateX(20px);
+      }
+
+      .monitor {
+        transform: translateX(-20px);
       }
     }
 
