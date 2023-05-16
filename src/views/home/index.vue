@@ -247,10 +247,10 @@ function handleRoute() {
   }
 
   .app {
-    height: 1080px;
     display: flex;
     justify-content: center;
     align-items: center;
+    padding: 140px 0 0px;
 
     .app-img {
       width: 800px;
@@ -289,6 +289,7 @@ function handleRoute() {
       .monitor:hover {
         // z-index: 4;
         // transform: translateX(-20px);
+
       }
     }
 
@@ -363,7 +364,7 @@ function handleRoute() {
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    padding: 176px 0 286px;
+    padding: 44px 0 142px;
 
     h3 {
       max-width: 60%;
