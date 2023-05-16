@@ -23,11 +23,11 @@ interface productType {
 
 
 
-import product1 from '@/assets/product/product1.jpg'
-import product2 from '@/assets/product/product2.jpg'
+// import product1 from '@/assets/product/product1.jpg'
+// import product2 from '@/assets/product/product2.jpg'
 import product4 from '@/assets/product/product4.jpg'
 import product5 from '@/assets/product/product5.jpg'
-import product6 from '@/assets/product/product6.jpg'
+// import product6 from '@/assets/product/product6.jpg'
 import product7 from '@/assets/product/product7.jpg'
 import product8 from '@/assets/product/product8.jpg'
 import product9 from '@/assets/product/product9.jpg'
