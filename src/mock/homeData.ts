@@ -38,6 +38,8 @@ import product3 from '@/assets/product/product3.jpg'
 import banner1 from '@/assets/img/banner1.jpg'
 import banner2 from '@/assets/img/banner2.jpg'
 import banner3 from '@/assets/img/banner3.jpg'
+import banner4 from '@/assets/img/banner4.jpg'
+
 
 
 
@@ -65,7 +67,14 @@ export const homeData: homeType = {
             title: '电池4G高清摄像机',
             desc: '4G全网通｜太阳能供电｜智能红外侦测｜1080P高清',
             id: 1,
-        }
+        },
+        {
+            img: banner4,
+            subTitle: '免插电、开机即用',
+            title: '电池4G高清摄像机',
+            desc: '4G全网通｜太阳能供电｜智能红外侦测｜1080P高清',
+            id: 1,
+        },
     ],
     productData: {
         1: {
