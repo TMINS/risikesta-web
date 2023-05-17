@@ -36,6 +36,8 @@ import product11 from '@/assets/product/product11.jpg'
 import product12 from '@/assets/product/product12.jpg'
 import product13 from '@/assets/product/product13.jpg'
 import product14 from '@/assets/product/product14.jpg'
+import product15 from '@/assets/product/product15.jpg'
+import product16 from '@/assets/product/product16.jpg'
 
 
 export const productData: productPageType = {
@@ -80,13 +82,13 @@ export const productData: productPageType = {
             name: "电池4G高清摄像机",
             desc: '免插电、开机即用',
             id: 1,
-            img: product4
+            img: product15
         },
         {
             name: "电池4G高清摄像机",
             desc: '免插电、开机即用',
             id: 1,
-            img: product7
+            img: product16
         },
     ],
     conventionData: [

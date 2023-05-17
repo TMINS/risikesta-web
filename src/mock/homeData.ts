@@ -39,7 +39,7 @@ import banner1 from '@/assets/img/banner1.jpg'
 import banner2 from '@/assets/img/banner2.jpg'
 import banner3 from '@/assets/img/banner3.jpg'
 import banner4 from '@/assets/img/banner4.jpg'
-
+import banner5 from '@/assets/img/banner5.jpg'
 
 
 
@@ -70,6 +70,13 @@ export const homeData: homeType = {
         },
         {
             img: banner4,
+            subTitle: '免插电、开机即用',
+            title: '电池4G高清摄像机',
+            desc: '4G全网通｜太阳能供电｜智能红外侦测｜1080P高清',
+            id: 1,
+        },
+        {
+            img: banner5,
             subTitle: '免插电、开机即用',
             title: '电池4G高清摄像机',
             desc: '4G全网通｜太阳能供电｜智能红外侦测｜1080P高清',
