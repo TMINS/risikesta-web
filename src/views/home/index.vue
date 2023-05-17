@@ -51,7 +51,7 @@
         <div class="info">
           <h3>随连随看</h3>
           <h2>RSMART App</h2>
-          <p>不论何时何地，打开Risikesta App，随时随地都可轻松查看不论何时何地，打开Risikesta App。</p>
+          <p>不论何时何地，打开RSMART App，随时随地都可轻松查看。</p>
           <div class="handle">
             <p @click="handleLoadDown(homeData.iosUrl)"><span>IOS下载</span></p>
             <p @click="handleLoadDown(homeData.androidUrl)"><span>Android下载</span></p>
@@ -64,7 +64,7 @@
 
       <div class="more">
 
-        <h3 class="title">RISIKESTA是行业领先的低功耗产品及方案提供商
+        <h3 class="title">RISIKESTA是行业领先的低功耗产品及方案提供商   
           可为用户提供从设备到云平台全链路解决方案</h3>
         <p @click="() => router.push({
           path: '/about'
@@ -244,14 +244,14 @@ function handleLoadDown(url: string) {
   }
 
   .app {
-    height: 1080px;
+    height: 980px;
     display: flex;
     justify-content: center;
     align-items: center;
 
     .app-img {
       width: 800px;
-      height: 824px;
+      height: 784px;
       position: relative;
 
       .phone {
@@ -350,7 +350,7 @@ function handleLoadDown(url: string) {
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    padding: 176px 0 286px;
+    padding: 0 0 86px;
 
     h3 {
       max-width: 60%;

@@ -19,7 +19,7 @@
         </div>
 
         <div class="wireless classification" ref="wireless">
-            <h3 class="title">无线套装类产品</h3>
+            <h3 class="title">无线套装系列</h3>
             <div class="flex">
                 <cards v-for="(item, index) in productData.wirelessData" :key="index" :data="item"
                     @click="handleClick(item.id)" />
@@ -29,7 +29,7 @@
 
 
         <div class="convention classification" ref="convention">
-            <h3 class="title">常规类产品系列</h3>
+            <h3 class="title">常规产品系列</h3>
             <div class="flex">
                 <card v-for="(item, index) in productData.conventionData" :key="index" :data="item"
                     @click="handleClick(item.id)" />
@@ -39,7 +39,7 @@
 
 
         <div class="programme classification" ref="programme">
-            <h3 class="title">方案类产品系列</h3>
+            <h3 class="title">方案类系列</h3>
             <div class="flex">
 
                 <card v-for="(item, index) in productData.programmeData" :key="index" :data="item"

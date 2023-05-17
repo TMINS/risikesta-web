@@ -31,59 +31,78 @@ interface productType {
  * @description 首页数据配置
  */
 
-import product1 from '@/assets/product/product1.png'
-import product2 from '@/assets/product/product2.png'
-import product3 from '@/assets/product/product3.png'
+import product1 from '@/assets/product/product1.jpg'
+import product2 from '@/assets/product/product2.jpg'
+import product3 from '@/assets/product/product3.jpg'
 
-import banner1 from '@/assets/img/banner1.png'
-import banner2 from '@/assets/img/banner2.png'
-import banner3 from '@/assets/img/banner3.png'
+import banner1 from '@/assets/img/banner1.jpg'
+import banner2 from '@/assets/img/banner2.jpg'
+import banner3 from '@/assets/img/banner3.jpg'
+import banner4 from '@/assets/img/banner4.jpg'
+import banner5 from '@/assets/img/banner5.jpg'
 
 
 
 export const homeData: homeType = {
     iosUrl: 'https://apps.apple.com/us/app/rsmart/id1610291126?l=zh',
     androidUrl: 'http://minio.rsmarttech.com:7000/app/rsmart.apk',
+    //首页头部Banner数据
     bannerList: [
         {
             img: banner1,
-            subTitle: '免插电、开机即用',
-            title: '电池4G高清摄像机',
-            desc: '4G全网通｜太阳能供电｜智能红外侦测｜1080P高清',
+            subTitle: '没网也能用的摄像机',
+            title: '家庭/商铺安防套包',
+            desc: '安装简便｜无需网线｜智能侦测｜全天录像｜2K高清',
             id: 0,
         },
         {
             img: banner2,
-            subTitle: '免插电、开机即用',
-            title: '电池4G高清摄像机',
-            desc: '4G全网通｜太阳能供电｜智能红外侦测｜1080P高清',
+            subTitle: '专门给小朋友准备的摄像机',
+            title: '智能婴儿看护套包',
+            desc: '闪闪小星星｜原声妈妈安抚音｜可触摸控制｜独立音腔设计｜双向语音对讲',
             id: 0,
         },
         {
             img: banner3,
-            subTitle: '免插电、开机即用',
-            title: '电池4G高清摄像机',
-            desc: '4G全网通｜太阳能供电｜智能红外侦测｜1080P高清',
+            subTitle: '免布线、免施工，即贴即用',
+            title: '智能可视门铃',
+            desc: '超大电池容量｜超大可视角度｜智能人形检测｜2K高清视频',
+            id: 0,
+        },
+        {
+            img: banner4,
+            subTitle: '双向云台、双灯光源',
+            title: '智能云台机',
+            desc: '双频wifi｜超大视角｜双向语音｜一键呼叫｜2K高清',
+            id: 0,
+        },                
+        {
+            img: banner5,
+            subTitle: '纯无线、太阳能供电、自动拨号开机即用',
+            title: '太阳能4G高清摄像机',
+            desc: '4G全网通｜12寸太阳能板｜2.5寸小巧尺寸｜2K高清',
             id: 0,
         }
     ],
+    //RISIKESTA产品类
     productData: {
         1: {
-            name: "电池4G高清摄像机",
-            desc: '免插电、开机即用',
+            name: "智能可视门铃",
+            desc: '免插线、免打孔、开机即用',
             id: 1,
             img: product1
         },
         2: {
-            name: "电池4G高清摄像机",
-            desc: '免插电、开机即用',
+            name: "电池摄像机",
+            desc: '免插线、可转动、安装简易、开机即用',
             id: 1,
             img: product2
         },
     },
+    //RISIKESTA方案类
     programmeData: {
-        name: "电池4G高清摄像机",
-        desc: '免插电、开机即用',
+        name: "智能猫眼门锁",
+        desc: '双电源、低功耗、大视角、够安全',
         id: 1,
         img: product3
     }
