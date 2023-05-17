@@ -1,6 +1,6 @@
 
 import egImg from '@/assets/img/goods.png'  //示图片
-import egLongImg from '@/assets/img/product-detail.png'  //示图片
+import egLongImg from '@/assets/img/product-detail.jpg'  //示图片
 /**
  * @description  本文件为产品数据  所有产品数据  在productType 下以   key:{具体内容}   形式添加   具体字段参照本文件提供的类型声明
  * 

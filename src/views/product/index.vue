@@ -1,10 +1,18 @@
 <template>
     <div class="product">
-        <ul class="mini-nav" :class="adsorption ? 'fold' : ''">
-            <li v-for="(item, index) in nav" :key="index" :class="activeIndex == index ? 'active' : ''"
-                @click="handleScroll(item.top)">{{
-                    item.name }}</li>
-        </ul>
+
+        <div class="mini-nav" :class="adsorption ? 'fold' : ''">
+            <div class="logo" v-show="adsorption" @click="handleRoute">
+                <img src="@/assets/img/logo.png" alt="" />
+            </div>
+            <p></p>
+            <ul>
+                <li v-for="(item, index) in nav" :key="index" :class="activeIndex == index ? 'active' : ''"
+                    @click="handleScroll(item.top)">{{
+                        item.name }}</li>
+            </ul>
+        </div>
+
 
         <div class="banner">
             <img src="@/assets/img/product-banner.png" alt="">
@@ -55,12 +63,13 @@
 
 
 <script lang='ts' setup>
-import { ref, watch, onMounted } from 'vue'
+import { ref, watch, onMounted, onUnmounted } from 'vue'
 import { useRoute, useRouter } from 'vue-router'
 import { useWindowScroll } from '@vueuse/core'
 import card from '@/components/card/index.vue'
 import cards from '@/components/cards/index.vue'
 import { productData } from '@/mock/productPageData'
+import eventBus from '@/eventBus'
 
 const nav = ref([
     {
@@ -101,7 +110,10 @@ watch(y, () => {
     }
     nav.value.map((item, index) => {
         if (y.value > item.top) {
-            activeIndex.value = index
+            if (activeIndex.value !== index) {
+                activeIndex.value = index
+                eventBus.emit('updateNav', item.point)
+            }
         }
         return item
     })
@@ -109,14 +121,31 @@ watch(y, () => {
 
 watch(route, reset)
 onMounted(() => {
-    reset()
     nav.value = nav.value.map(item => {
         item.top = (document.getElementsByClassName(item.point)[0] as HTMLDivElement)?.offsetTop
         return item
     })
-    reset()
+
+    nextTick(() => {
+        setTimeout(() => {
+            reset()
+        }, 100)
+    })
+
+    eventBus.on('productPageChange', () => {
+        setTimeout(() => {
+            reset()
+        }, 100)
+    })
+
+})
+onUnmounted(() => {
+    eventBus.off('productPageChange')
 })
 
+/**
+ * @description 重定向到指定位置
+ */
 function reset() {
     if (route.query && route.query.point) {
         let res = nav.value.filter(item => item.point === route.query.point)
@@ -124,6 +153,11 @@ function reset() {
     }
 
 }
+/**
+ * 
+ * @param top 
+ * @description 滚动到指定位置
+ */
 function handleScroll(top: number) {
     window.scrollTo({
         top: top + 50,
@@ -138,6 +172,9 @@ function handleClick(id: number) {
             id
         }
     })
+}
+function handleRoute() {
+    router.push('/home')
 }
 
 </script>
@@ -157,8 +194,23 @@ function handleClick(id: number) {
         z-index: 3;
         display: flex;
         align-items: center;
-        justify-content: flex-end;
+        justify-content: space-between;
         background: #fff;
+
+        .logo {
+            cursor: pointer;
+
+            img {
+                width: 222px;
+                height: auto;
+            }
+        }
+
+        ul {
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+        }
 
         li {
             height: 100%;
@@ -194,6 +246,7 @@ function handleClick(id: number) {
     .banner {
         width: 100%;
         height: 660px;
+        overflow: hidden;
 
         img {
             width: 100%;
@@ -224,7 +277,8 @@ function handleClick(id: number) {
             flex-wrap: wrap;
 
             .info {
-                width: 49%;
+                // width: 49%;
+                width: calc(50% - 10px);
             }
         }
 

@@ -23,15 +23,10 @@
                 <input type="text" placeholder="您希望了解或者解决的问题" v-model="from.question">
             </p>
             <div class="flex">
-                <!-- <div class="handle" @click="handleLive">在线沟通</div>
-                <div class="handle" @click="handleSend">发送</div> -->
+                <div class="handle" @click="handleLive">在线沟通</div>
+                <div class="handle" @click="handleSend">发送</div>
 
-                <div>
-                    <img @click="handleLive" src="@/assets/img/listen.png" alt="">
-                </div>
-                <div>
-                    <img @click="handleSend" src="@/assets/img/send.png" alt="">
-                </div>
+
             </div>
         </div>
     </div>
@@ -165,12 +160,10 @@ function handleSend() {
                 background: none;
                 font-size: 18px;
                 color: #000;
-                font-weight: 550;
             }
 
             input::placeholder {
                 color: rgba($color: #000000, $alpha: .4);
-                font-weight: bold;
             }
         }
 
@@ -197,14 +190,7 @@ function handleSend() {
                 background: #00A4BB;
             }
 
-            div {
-                margin-right: 20px;
 
-                img {
-                    width: 180px;
-                    height: 56px;
-                }
-            }
         }
     }
 }

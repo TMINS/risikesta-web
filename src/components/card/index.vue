@@ -1,7 +1,6 @@
 <template>
     <div class="info">
-        <img v-if="data.img" :src="data.img" alt="">
-        <img v-else src="@/assets/img/product1.png" alt="">
+        <img :src="data.img" alt="">
         <div class="desc">
             <h4>{{ data.name }}</h4>
             <p>{{ data.desc }}</p>
@@ -46,6 +45,7 @@ defineProps(['data'])
 
         h4 {
             font-weight: normal;
+            line-height: 46px;
             font-size: 42px;
             // opacity: 0;
             // transform: translateY(-20px);

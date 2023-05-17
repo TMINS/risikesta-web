@@ -504,6 +504,7 @@ function handleSubmit() {
             display: flex;
             align-items: center;
             justify-content: space-between;
+            font-weight: normal;
 
             span {
                 font-size: 32px;
@@ -511,8 +512,8 @@ function handleSubmit() {
             }
 
             img {
-                width: 38px;
-                height: 38px;
+                width: 28px;
+                height: 28px;
             }
 
             .active {
@@ -523,12 +524,12 @@ function handleSubmit() {
         ul {
             margin-top: 24px;
             background: #FBFBFB;
-            border-top: 1px solid rgba($color: #262626, $alpha: .4);
+            border-top: 3px solid rgba($color: #262626, $alpha: .4);
             overflow: hidden;
 
             li {
                 height: 66px;
-                border-bottom: 1px dashed #eee;
+                border-bottom: 1px dashed rgba($color: #000000, $alpha: .2);
                 display: flex;
                 align-items: center;
                 justify-content: space-between;
@@ -546,7 +547,7 @@ function handleSubmit() {
             }
 
             li:last-child {
-                border: none;
+                border-bottom: 1px dashed transparent;
             }
         }
     }

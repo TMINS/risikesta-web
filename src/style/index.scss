@@ -20,3 +20,16 @@ li {
     font-size: 48px;
     text-align: center;
 }
+
+*::-webkit-scrollbar {
+    width: 8px;
+    background: #eee;
+    border-radius: 10px;
+}
+
+*::-webkit-scrollbar-thumb {
+    width: 8px;
+    height: 8px;
+    background: #767676;
+    border-radius: 10px;
+}
