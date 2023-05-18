@@ -36,10 +36,12 @@ import product9 from '@/assets/product/product9.jpg'
 import product10 from '@/assets/product/product10.jpg'
 import product11 from '@/assets/product/product11.jpg'
 import product12 from '@/assets/product/product12.jpg'
-import product13 from '@/assets/product/product13.jpg'
-import product14 from '@/assets/product/product14.jpg'
+// import product13 from '@/assets/product/product13.jpg'
+// import product14 from '@/assets/product/product14.jpg'
 import product15 from '@/assets/product/product15.jpg'
 import product16 from '@/assets/product/product16.jpg'
+import product17 from '@/assets/product/product17.jpg'
+import product18 from '@/assets/product/product18.jpg'
 
 export const productData: productPageType = {
 
@@ -47,37 +49,37 @@ export const productData: productPageType = {
         {
             name: "电池4G高清摄像机",
             desc: '免插电、开机即用',
-            id: 1,
+            id: 4,
             img: product10
         },
         {
             name: "电池4G高清摄像机",
             desc: '免插电、开机即用',
-            id: 1,
+            id: 3,
             img: product11
         },
         {
             name: "电池4G高清摄像机",
             desc: '免插电、开机即用',
-            id: 1,
-            img: product13
+            id: 7,
+            img: product18
         },
         {
             name: "电池4G高清摄像机",
             desc: '免插电、开机即用',
-            id: 1,
+            id: 5,
             img: product12
         },
         {
             name: "电池4G高清摄像机",
             desc: '免插电、开机即用',
-            id: 1,
+            id: 6,
             img: product5
         },
         {
             name: "电池4G高清摄像机",
             desc: '免插电、开机即用',
-            id: 1,
+            id: 6,
             img: product5
         },
 
@@ -88,13 +90,13 @@ export const productData: productPageType = {
         {
             name: "电池4G高清摄像机",
             desc: '免插电、开机即用',
-            id: 1,
+            id: 9,
             img: product15
         },
         {
             name: "电池4G高清摄像机",
             desc: '免插电、开机即用',
-            id: 1,
+            id: 8,
             img: product16
         },
     ],
@@ -108,7 +110,7 @@ export const productData: productPageType = {
         {
             name: "电池4G高清摄像机",
             desc: '免插电、开机即用',
-            id: 1,
+            id: 2,
             img: product9
         },
     ],
@@ -116,14 +118,14 @@ export const productData: productPageType = {
         {
             name: "电池4G高清摄像机",
             desc: '免插电、开机即用',
-            id: 1,
+            id: 6,
             img: product5
         },
         {
             name: "电池4G高清摄像机",
             desc: '免插电、开机即用',
-            id: 1,
-            img: product14
+            id: 10,
+            img: product17
         },
     ],
 }

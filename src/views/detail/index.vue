@@ -82,6 +82,10 @@
 
             <div class="banner">
                 <img :src="productData.longImg" alt="">
+                <div class="info">
+                    <h4>{{ productData.longTitle }}</h4>
+                    <p>{{ productData.longSubTitle }}</p>
+                </div>
             </div>
 
 
@@ -563,10 +567,29 @@ function handleSubmit() {
     margin: 0 auto;
     position: relative;
     padding: 80px 0;
+    position: relative;
 
     img {
         width: 100%;
         height: 510px;
+    }
+
+    .info {
+        position: absolute;
+        left: 100px;
+        top: 250px;
+        color: #fff;
+
+        h4 {
+            font-size: 44px;
+            color: #fff;
+            font-weight: normal;
+        }
+
+        p {
+            font-size: 26px;
+            padding-top: 20px;
+        }
     }
 
 }
