@@ -82,7 +82,7 @@
 
             <div class="banner">
                 <img :src="productData.longImg" alt="">
-                <div class="info">
+                <div class="info" v-if="id !== 9 && id !== 8">
                     <h4>{{ productData.longTitle }}</h4>
                     <p>{{ productData.longSubTitle }}</p>
                 </div>
@@ -149,11 +149,11 @@ const nav = ref([
 const adsorption = ref(false)
 const activeIndex = ref(1)
 // 获取产品数据
-let id: number = 1
+let id = ref(1)
 if (route.query.id) {
-    id = Number(route.query.id)
+    id.value = Number(route.query.id)
 }
-const productData = data[id]
+const productData = data[id.value]
 const propList = ref(productData.property)
 const from = ref({
     name: '',
