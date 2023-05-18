@@ -64,7 +64,7 @@
 
       <div class="more">
 
-        <h3 class="title">RISIKESTA是行业领先的低功耗产品及方案提供商   
+        <h3 class="title">RISIKESTA是行业领先的低功耗产品及方案提供商
           可为用户提供从设备到云平台全链路解决方案</h3>
         <p @click="() => router.push({
           path: '/about'
@@ -367,14 +367,14 @@ function handleRoute() {
     padding: 44px 0 142px;
 
     h3 {
-      max-width: 60%;
+      max-width: 58%;
       font-size: 48px;
       line-height: 84px;
     }
 
     p {
       margin-top: 62px;
-
+      font-size: 24px;
       background-color: #000;
       color: #fff;
       text-align: center;
