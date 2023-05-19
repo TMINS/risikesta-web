@@ -5,7 +5,7 @@
       <div class="banner">
         <el-carousel ref="carousel" :height="984 / 1920 * 100 + 'vw'" :interval="5000" arrow="never" :loop="false">
           <el-carousel-item v-for="(item, index) in homeData.bannerList" :key="index">
-            <div class="banner-item" :class="(index + 1) % 2 == 0 ? 'banner-item-black' : ''">
+            <div class="banner-item">
               <img :src="item.img" alt="">
               <div class="banner-info">
                 <p>{{ item.subTitle }}</p>

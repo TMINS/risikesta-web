@@ -15,7 +15,24 @@
 
 
         <div class="banner">
-            <img src="@/assets/img/product-banner.png" alt="">
+            <el-carousel ref="carousel" :height="660 / 1920 * 100 + 'vw'" :interval="5000" arrow="never" :loop="false">
+                <el-carousel-item v-for="(item, index) in productData.bannerList" :key="index">
+                    <div class="banner-item">
+                    <img :src="item.img" alt="">
+                    <div class="info">
+                            <h3>{{ item.title }}</h3>
+                            <p>{{ item.subTitle }}</p>
+                        </div>
+                    </div>
+                </el-carousel-item>
+            </el-carousel>
+
+            <div class="arrow-left" @click="handlePrev">
+          <img src="@/assets/img/arrow-white.png" alt="">
+        </div>
+        <div class="arrow-right" @click="handleNext">
+          <img src="@/assets/img/arrow-white.png" alt="">
+        </div>
         </div>
 
         <div class="consumption classification" ref="consumption">
@@ -69,6 +86,7 @@ import { useWindowScroll } from '@vueuse/core'
 import card from '@/components/card/index.vue'
 import cards from '@/components/cards/index.vue'
 import { productData } from '@/mock/productPageData'
+import { ElCarousel } from 'element-plus'
 import eventBus from '@/eventBus'
 
 const nav = ref([
@@ -143,6 +161,16 @@ onUnmounted(() => {
     eventBus.off('productPageChange')
 })
 
+const carousel = ref(null)
+function handlePrev() {
+  let obj = carousel.value as any
+  obj.prev()
+}
+function handleNext() {
+  let obj = carousel.value as any
+  obj.next()
+}
+
 /**
  * @description 重定向到指定位置
  */
@@ -199,11 +227,12 @@ function handleRoute() {
 
         .logo {
             cursor: pointer;
-
+            position: relative;
             img {
                 width: 222px;
                 height: auto;
             }
+           
         }
 
         ul {
@@ -247,7 +276,7 @@ function handleRoute() {
         width: 100%;
         height: 660px;
         overflow: hidden;
-
+        position: relative;
         img {
             width: 100%;
             height: 100%;
@@ -256,6 +285,58 @@ function handleRoute() {
         img:hover {
             transform: scale(1.02);
         }
+        .banner-item{
+            height: 660px;
+        }
+        .info{
+            position: absolute;
+            left: 50%;
+            top: 230px;
+            transform: translateX(-50%);
+            color: #fff;
+            h3{
+                font-size: 55px;
+            }
+            p{
+                font-size: 16px;
+                padding-top: 20px;
+            }
+        }
+            .arrow-right,
+    .arrow-left {
+      position: absolute;
+      top: 50%;
+      cursor: pointer;
+
+      img {
+        width: 38px;
+        height: 38px;
+      }
+    }
+
+    .arrow-right {
+      transform: rotate(180deg);
+      right: 100px;
+    }
+
+    .arrow-left {
+      left: 100px;
+    }
+
+    :deep(.el-carousel__indicators) {
+      li button {
+        width: 12px;
+        height: 12px;
+        border-radius: 50%;
+        background: #878787;
+      }
+
+      .is-active {
+        button {
+          background: #878787;
+        }
+      }
+    }
     }
 
 

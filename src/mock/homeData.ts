@@ -52,8 +52,8 @@ export const homeData: homeType = {
         {
             img: banner2,
             subTitle: '没网也能用的摄像机',
-            title: '智能云台机',
-            desc: '双频wifi｜超大视角｜双向语音｜一键呼叫｜2K高清',
+            title: '家庭/商铺安防套包',
+            desc: '安装简便｜无需网线｜智能侦测｜全天录像｜2K高清',            
             id: 8,
         },
         {
@@ -72,7 +72,7 @@ export const homeData: homeType = {
         },
         {
             img: banner5,
-            subTitle: '纯无线、太阳能供电、自动拨号开机即用',
+            subTitle: '纯无线、太阳能供电、自动拨号、开机即用',
             title: '太阳能4G高清摄像机',
             desc: '4G全网通｜12寸太阳能板｜2.5寸小巧尺寸｜2K高清',
             id: 7,
@@ -80,8 +80,8 @@ export const homeData: homeType = {
         {
             img: banner1,
             subTitle: '双向云台、双灯光源',
-            title: '家庭/商铺安防套包',
-            desc: '安装简便｜无需网线｜智能侦测｜全天录像｜2K高清',
+            title: '智能云台机',
+            desc: '双频wifi｜超大视角｜双向语音｜一键呼叫｜2K高清',
             id: 1,
         },
     ],

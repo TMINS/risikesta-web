@@ -1,8 +1,9 @@
 
 interface productPageType {
-    consumptionData: productType[], // 
-    wirelessData: productType[],
-    conventionData: productType[],
+    bannerList:bannerItem[],//轮播
+    consumptionData: productType[], // 低功耗
+    wirelessData: productType[], //无线套装
+    conventionData: productType[],//常规产品
     programmeData: productType[], // 方案类数据
 }
 
@@ -16,6 +17,11 @@ interface productType {
     id: number, // 产品id   重要   用于和 产品页数据联动
     img: string,// 产品图片
 }
+interface bannerItem{
+    img:string,//轮播图
+    title:string,// 标题
+    subTitle:string,//副标题
+}
 /**
  * @name productData
  * @description 产品页数据配置
@@ -25,6 +31,8 @@ interface productType {
 /**
  * 未使用的图片需要隐藏
  */
+import banner1 from '@/assets/img/product-banner1.jpg'
+
 // import product1 from '@/assets/product/product1.jpg'
 // import product2 from '@/assets/product/product2.jpg'
 // import product4 from '@/assets/product/product4.jpg'
@@ -44,29 +52,37 @@ import product17 from '@/assets/product/product17.jpg'
 import product18 from '@/assets/product/product18.jpg'
 
 export const productData: productPageType = {
+    bannerList:[
+        {
+            img:banner1,
+            title:'RISIKESTA',
+            subTitle:'产品的路，有起有伏，但前进的脚步从未停止'
+        },
+        
+    ],
 
     consumptionData: [
         {
-            name: "电池4G高清摄像机",
-            desc: '免插电、开机即用',
+            name: "AI智能可视门铃",
+            desc: '免插线、免打孔、开机即用',
             id: 4,
             img: product10
         },
         {
-            name: "电池4G高清摄像机",
-            desc: '免插电、开机即用',
+            name: "电池高清摄像机",
+            desc: '免插线、可转动、安装简易、开机即用',
             id: 3,
             img: product11
         },
         {
-            name: "电池4G高清摄像机",
-            desc: '免插电、开机即用',
+            name: "太阳能4G高清摄像机",
+            desc: '纯无线、超大容量电池、自动拨号、开机即用',
             id: 7,
             img: product18
         },
         {
-            name: "电池4G高清摄像机",
-            desc: '免插电、开机即用',
+            name: "AI智能可视门铃",
+            desc: '免插线、免打孔、超大视角、开机即用',
             id: 5,
             img: product12
         },
