@@ -413,10 +413,12 @@ function handleSubmit() {
                 text-align: center;
                 line-height: 24px;
                 padding: 4px 18px;
+                box-sizing: border-box;
                 margin-right: 4px;
                 flex-wrap: wrap;
                 background: #CCDEE7;
                 color: #025E84;
+                font-size: 14px;
             }
         }
 

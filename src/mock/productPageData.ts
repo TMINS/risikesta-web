@@ -87,59 +87,59 @@ export const productData: productPageType = {
             img: product12
         },
         {
-            name: "电池4G高清摄像机",
-            desc: '免插电、开机即用',
+            name: "智能猫眼门锁",
+            desc: '双电源、低功耗、大视角、够安全',
             id: 6,
             img: product5
         },
-        {
-            name: "电池4G高清摄像机",
-            desc: '免插电、开机即用',
-            id: 6,
-            img: product5
-        },
+        // {
+        //     name: "电池4G高清摄像机",
+        //     desc: '免插电、开机即用',
+        //     id: 6,
+        //     img: product5
+        // },
 
 
 
     ],
     wirelessData: [
         {
-            name: "电池4G高清摄像机",
-            desc: '免插电、开机即用',
+            name: "智能婴儿看护套包",
+            desc: '闪闪小星星｜原声妈妈安抚音｜可触摸控制｜独立音腔设计｜双向语音对讲',
             id: 9,
             img: product15
         },
         {
-            name: "电池4G高清摄像机",
-            desc: '免插电、开机即用',
+            name: "家庭/商铺安防套包",
+            desc: '没网也能用的摄像机，您的安全管家',
             id: 8,
             img: product16
         },
     ],
     conventionData: [
         {
-            name: "电池4G高清摄像机",
-            desc: '免插电、开机即用',
+            name: "智能云台机",
+            desc: '双频wifi｜双向语音｜一键呼叫｜2K高清',
             id: 1,
             img: product8
         },
         {
-            name: "电池4G高清摄像机",
-            desc: '免插电、开机即用',
+            name: "高清POE枪机",
+            desc: '网线供电、IP67级防水、上电即用',
             id: 2,
             img: product9
         },
     ],
     programmeData: [
         {
-            name: "电池4G高清摄像机",
-            desc: '免插电、开机即用',
+            name: "智能猫眼门锁",
+            desc: '双电源、低功耗、大视角、够安全',
             id: 6,
             img: product5
         },
         {
-            name: "电池4G高清摄像机",
-            desc: '免插电、开机即用',
+            name: "智能逗鸟摄像机",
+            desc: '纯无线、开机即用、自动识别各种鸟类',
             id: 10,
             img: product17
         },
