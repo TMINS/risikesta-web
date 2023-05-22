@@ -22,6 +22,7 @@ import baseBotton from '@/components/baseBotton/index.vue'
 .layout {
   min-height: 100vh;
   padding-top: 96px;
+  font-size: 16px;
 }
 
 .fade-enter-active,

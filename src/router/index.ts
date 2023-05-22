@@ -4,8 +4,12 @@ import routes from './routes'
 const router = createRouter({
     history: createWebHistory(),
     routes: routes,
-    scrollBehavior() {
-        return { top: 0 }
+    scrollBehavior(to,from,savedPosition:any) {
+        if(from.path.includes('detail')){
+            return savedPosition
+        }else{
+            return { top: 0 }
+        }
     }
 })
 

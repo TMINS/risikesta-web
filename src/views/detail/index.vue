@@ -3,7 +3,7 @@
     <div class="detail">
         <section>
             <div class="mini-nav" :class="adsorption ? 'fold' : ''">
-                <h5>{{ productData.subTitle }}/</h5>
+                <h5>{{ productData.subTitle }}</h5>
                 <ul>
                     <li v-for="(item, index) in nav" :key="index" :class="activeIndex == index ? 'active' : ''"
                         @click="handleScroll(item.top)">{{
@@ -446,6 +446,7 @@ function handleSubmit() {
         p {
             font-size: 16px;
             padding-bottom: 20px;
+            font-weight: bold;
         }
 
         ul {
@@ -487,6 +488,9 @@ function handleSubmit() {
             color: #fff;
             border-radius: 50px;
             cursor: pointer;
+            // span{
+            //     font-size: 1.1vw;
+            // }
         }
 
         .handle:first-child {

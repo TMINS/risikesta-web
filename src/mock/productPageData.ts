@@ -56,11 +56,12 @@ export const productData: productPageType = {
         {
             img:banner1,
             title:'RISIKESTA',
-            subTitle:'产品的路，有起有伏，但前进的脚步从未停止'
+            subTitle:'产品的路，有起有伏，但前进的脚步从未停止......'
         },
         
     ],
 
+    //低功耗系列
     consumptionData: [
         {
             name: "AI智能可视门铃",
@@ -102,6 +103,8 @@ export const productData: productPageType = {
 
 
     ],
+
+    //无线套装系列
     wirelessData: [
         {
             name: "智能婴儿看护套包",
@@ -116,6 +119,8 @@ export const productData: productPageType = {
             img: product16
         },
     ],
+
+    //常规安防系列
     conventionData: [
         {
             name: "智能云台机",
@@ -130,6 +135,8 @@ export const productData: productPageType = {
             img: product9
         },
     ],
+
+    //方案系列
     programmeData: [
         {
             name: "智能猫眼门锁",
